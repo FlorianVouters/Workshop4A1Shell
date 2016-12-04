@@ -1,13 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <sys/types.h>
-#include <unistd.h>
+#include <stdio.h> /*bibliothèque standard du C déclarant les macros, les constantes et les définitions de fonctions utilisées dans les opérations d'entrée/sortie.*/
+#include <stdlib.h> /*stdlib contient les fonctions d'allocation mémoire et d'autres fonctions basique du langage C*/
+#include <fcntl.h> /* C'est la bibliothèque contenant les fonctions relative à la manipulation des fichiers et dossier */
+#include <sys/types.h> /* Bilbiothèque relative aux types de fichiers */
+#include <unistd.h> /* Il définit les constantes et les types symboliques divers, et déclare fonctions diverses */
 #define BUF_SIZE 512
 
-int main(int argc, char* argv[])
-{
-	
+int main(int argc, char* argv[]) /* argc s'occupe de donner le nombre de chaine de caractère qu'il y a dans argv */
+{				/* Tandis que argv s'occupe de prendre les informations complémentaires au lancement du programme, en général, */
+				/* argc = 1 car argv comprend toujours l'adresse entière d'où se trouve le programme dans l'ordinateur*/
 	int idFichierLu, idFichierEcrit;
 	int byteLu, byteEcrit;
 	char buffer[BUF_SIZE];
